@@ -36,7 +36,7 @@
           {
               "name": "OpenG2P Social Registry e-Cards",
               "logo": {
-                  "url": "${openg2p.social.registry.base.url}/g2p_openid_vci/static/description/icon.png",
+                  "url": "${openg2p.social.registry.base.url}/g2p_tlgn/static/description/icon.png",
                   "alt_text": "openg2p-logo"
               },
               "title": "OpenG2P Social Registry e-Cards",
@@ -58,36 +58,6 @@
       "credential_endpoint": "${openg2p.social.registry.base.url}/api/v1/vci/credential",
       "credential_type": ["VerifiableCredential", "OpenG2PRegistryVerifiableCredential","OpenG2PRegistryGroupVerifiableCredential"],
       "credential_audience": "${openg2p.social.registry.base.url}",
-      "enabled": "true"
-    },
-    {
-      "credential_issuer": "OpenG2PBeneficiary",
-      "display": [
-          {
-              "name": "OpenG2P Beneficiary e-Cards",
-              "logo": {
-                  "url": "${openg2p.pbms.base.url}/g2p_openid_vci/static/description/icon.png",
-                  "alt_text": "openg2p-logo"
-              },
-              "title": "OpenG2P Beneficiary e-Cards",
-              "description": "Download Beneficiary e-Cards for Social Welfare Programs",
-              "language": "en"
-          }
-      ],
-      "protocol": "OpenId4VCI",
-      "client_id": "${mimoto.oidc.openg2p.partner.clientid}",
-      "client_alias": "openg2p-mimotooidc",
-      "scopes_supported": ["openg2p_beneficiary_1_vc_ldp", "openg2p_beneficiary_2_vc_ldp"],
-      "additional_headers": { "Accept": "application/json" },
-      ".well-known": "${openg2p.pbms.base.url}/api/v1/vci/.well-known/openid-credential-issuer",
-      "redirect_uri": "io.mosip.residentapp.inji://oauthredirect",
-      "authorization_endpoint": "https://${mosip.esignet.host}/authorize",
-      "authorization_audience": "https://${mosip.esignet.host}/v1/esignet/oauth/v2/token",
-      "token_endpoint": "https://${mosip.api.public.host}/residentmobileapp/get-token/OpenG2PBeneficiary",
-      "proxy_token_endpoint": "https://${mosip.esignet.host}/v1/esignet/oauth/v2/token",
-      "credential_endpoint": "${openg2p.pbms.base.url}/api/v1/vci/credential",
-      "credential_type": ["VerifiableCredential", "OpenG2PBeneficiaryVerifiableCredential"],
-      "credential_audience": "${openg2p.pbms.base.url}",
       "enabled": "true"
     }
   ]
